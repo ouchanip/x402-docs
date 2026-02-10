@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,20 +13,25 @@
         </div>
         <header>
             <h1>PDF Invoice Generator API</h1>
-            <p>JSONデータからPDF請求書を生成</p>
         </header>
 
         <section>
-            <h3>基本情報</h3>
-            <ul>
-                <li><strong>URL:</strong> <code>https://pdf-invoice-api-x402-689670267582.asia-northeast1.run.app</code></li>
-                <li><strong>エンドポイント:</strong> <code>POST /generate</code></li>
-                <li><strong>価格:</strong> <span class="price">$0.02 USDC</span></li>
-            </ul>
+            <h3>What it does</h3>
+            <p>Generates a professional PDF invoice from structured JSON data.</p>
         </section>
 
         <section>
-            <h3>リクエスト例</h3>
+            <h3>Endpoint</h3>
+            <p><code>POST https://pdf-invoice-api-x402-689670267582.asia-northeast1.run.app/generate</code></p>
+        </section>
+
+        <section>
+            <h3>Price</h3>
+            <p class="price">$0.02 USDC</p>
+        </section>
+
+        <section>
+            <h3>Request Example</h3>
             <pre><code>{
   "from": {
     "name": "Company Name"
@@ -45,14 +50,14 @@
         </section>
 
         <section>
-            <h3>レスポンス</h3>
-            <p>PDFファイルがバイナリで返されます。</p>
+            <h3>Response</h3>
+            <p>Returns the generated invoice as a PDF file binary.</p>
         </section>
 
         <footer>
-            <p><strong>支払い方法:</strong> x402プロトコル (USDC on Base L2)</p>
-            <p><strong>ウォレット:</strong> <code>0xc9c96128215baEA725880B004D49809C9122eb49</code></p>
-            <p><strong>認証不要:</strong> アカウント作成・APIキー不要</p>
+            <p><strong>Payment:</strong> x402 protocol, USDC on Base L2</p>
+            <p><strong>Wallet:</strong> <code>0xc9c96128215baEA725880B004D49809C9122eb49</code></p>
+            <p><strong>Auth:</strong> No accounts or API keys required.</p>
             <p><strong>GitHub:</strong> <a href="https://github.com/ouchanip">https://github.com/ouchanip</a></p>
         </footer>
     </div>
