@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation API - x402 Docs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html">← Top</a>
+        </div>
+        <header>
+            <h1>Email Validation API</h1>
+            <p>メールアドレスの有効性を検証（形式・到達可能性・使い捨て判定）</p>
+        </header>
+
+        <section>
+            <h3>基本情報</h3>
+            <ul>
+                <li><strong>URL:</strong> <code>https://email-validation-api-x402-689670267582.asia-northeast1.run.app</code></li>
+                <li><strong>エンドポイント:</strong> <code>POST /validate</code></li>
+                <li><strong>価格:</strong> <span class="price">$0.01 USDC (Base L2)</span></li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>リクエスト例</h3>
+            <pre><code>{
+  "email": "user@example.com"
+}</code></pre>
+        </section>
+
+        <section>
+            <h3>レスポンス例</h3>
+            <pre><code>{
+  "valid": true,
+  "deliverable": true,
+  "disposable": false
+}</code></pre>
+        </section>
+
+        <footer>
+            <p><strong>支払い方法:</strong> x402プロトコル (USDC on Base L2)</p>
+            <p><strong>ウォレット:</strong> <code>0xc9c96128215baEA725880B004D49809C9122eb49</code></p>
+            <p><strong>認証不要:</strong> アカウント作成・APIキー不要</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/ouchanip">https://github.com/ouchanip</a></p>
+        </footer>
+    </div>
+</body>
+</html>
