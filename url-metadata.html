@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Markdown to PDF API - x402 Docs</title>
+    <title>URL Metadata Extractor API - x402 Docs</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,34 +12,34 @@
             <a href="index.html">← Top</a>
         </div>
         <header>
-            <h1>Markdown to PDF API</h1>
+            <h1>URL Metadata Extractor API</h1>
         </header>
 
         <section>
             <h3>What it does</h3>
-            <p>Converts Markdown text into clean, styled PDF documents.</p>
+            <p>Extracts metadata (title, description, image) from a URL.</p>
         </section>
 
         <section>
             <h3>Endpoint</h3>
-            <p><code>POST https://md-to-pdf-api-x402-689670267582.us-central1.run.app/convert</code></p>
+            <p><code>POST https://url-metadata-api-x402-689670267582.us-central1.run.app/extract</code></p>
         </section>
 
         <section>
             <h3>Price</h3>
-            <p class="price">$0.02 USDC</p>
+            <p class="price">$0.005 USDC</p>
         </section>
 
         <section>
             <h3>Request Example</h3>
             <pre><code>{
-  "markdown": "# Hello World\n\nThis is a sample markdown converted to PDF."
+  "url": "https://example.com"
 }</code></pre>
         </section>
 
         <section>
             <h3>Response</h3>
-            <p>Returns the converted document as a PDF file binary.</p>
+            <p>Returns a JSON object with metadata.</p>
         </section>
 
         <footer>
