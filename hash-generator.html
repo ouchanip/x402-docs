@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Generator API - x402 Docs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html">← Top</a>
+        </div>
+        <header>
+            <h1>Hash Generator API</h1>
+        </header>
+
+        <section>
+            <h3>What it does</h3>
+            <p>Generates cryptographic hashes (MD5, SHA1, SHA256, SHA512, bcrypt) from input text, and verifies hashes against input values.</p>
+        </section>
+
+        <section>
+            <h3>Endpoints</h3>
+            <p><code>POST https://hash-generator-api-x402-689670267582.us-central1.run.app/generate</code></p>
+            <p><code>POST https://hash-generator-api-x402-689670267582.us-central1.run.app/verify</code></p>
+        </section>
+
+        <section>
+            <h3>Price</h3>
+            <p class="price">$0.005 USDC per request (Base L2)</p>
+        </section>
+
+        <section>
+            <h3>Generate Hash - Request Example</h3>
+            <pre><code>{
+  "text": "hello world",
+  "algorithm": "sha256"
+}</code></pre>
+            <p>Supported algorithms: <code>md5</code>, <code>sha1</code>, <code>sha256</code>, <code>sha512</code>, <code>bcrypt</code></p>
+        </section>
+
+        <section>
+            <h3>Generate Hash - Response</h3>
+            <pre><code>{
+  "hash": "b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9",
+  "algorithm": "sha256"
+}</code></pre>
+        </section>
+
+        <section>
+            <h3>Verify Hash - Request Example</h3>
+            <pre><code>{
+  "text": "hello world",
+  "hash": "b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9",
+  "algorithm": "sha256"
+}</code></pre>
+        </section>
+
+        <section>
+            <h3>Verify Hash - Response</h3>
+            <pre><code>{
+  "valid": true
+}</code></pre>
+        </section>
+
+        <footer>
+            <p><strong>Payment:</strong> x402 protocol, USDC on Base L2</p>
+            <p><strong>Wallet:</strong> <code>0xc9c96128215baEA725880B004D49809C9122eb49</code></p>
+            <p><strong>Auth:</strong> No accounts or API keys required.</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/ouchanip">https://github.com/ouchanip</a></p>
+        </footer>
+    </div>
+</body>
+</html>

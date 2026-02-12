@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JWT Generator API - x402 Docs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html">← Top</a>
+        </div>
+        <header>
+            <h1>JWT Generator API</h1>
+        </header>
+
+        <section>
+            <h3>What it does</h3>
+            <p>Generates and decodes JSON Web Tokens (JWT). Create signed tokens with custom payloads or decode existing tokens to inspect their contents.</p>
+        </section>
+
+        <section>
+            <h3>Endpoints</h3>
+            <p><code>POST https://jwt-generator-api-x402-689670267582.us-central1.run.app/generate</code></p>
+            <p><code>POST https://jwt-generator-api-x402-689670267582.us-central1.run.app/decode</code></p>
+        </section>
+
+        <section>
+            <h3>Price</h3>
+            <p class="price">$0.005 USDC per request (Base L2)</p>
+        </section>
+
+        <section>
+            <h3>Generate JWT - Request Example</h3>
+            <pre><code>{
+  "payload": {
+    "sub": "1234567890",
+    "name": "John Doe",
+    "admin": true
+  },
+  "secret": "your-secret-key",
+  "expiresIn": "1h"
+}</code></pre>
+        </section>
+
+        <section>
+            <h3>Generate JWT - Response</h3>
+            <pre><code>{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+}</code></pre>
+        </section>
+
+        <section>
+            <h3>Decode JWT - Request Example</h3>
+            <pre><code>{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+}</code></pre>
+        </section>
+
+        <section>
+            <h3>Decode JWT - Response</h3>
+            <pre><code>{
+  "header": {
+    "alg": "HS256",
+    "typ": "JWT"
+  },
+  "payload": {
+    "sub": "1234567890",
+    "name": "John Doe",
+    "admin": true,
+    "iat": 1516239022
+  }
+}</code></pre>
+        </section>
+
+        <footer>
+            <p><strong>Payment:</strong> x402 protocol, USDC on Base L2</p>
+            <p><strong>Wallet:</strong> <code>0xc9c96128215baEA725880B004D49809C9122eb49</code></p>
+            <p><strong>Auth:</strong> No accounts or API keys required.</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/ouchanip">https://github.com/ouchanip</a></p>
+        </footer>
+    </div>
+</body>
+</html>

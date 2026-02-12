@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Screenshot API - x402 Docs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html">← Top</a>
+        </div>
+        <header>
+            <h1>Web Screenshot API</h1>
+        </header>
+
+        <section>
+            <h3>What it does</h3>
+            <p>Captures screenshots of any webpage. Returns high-quality PNG images with configurable viewport and options.</p>
+        </section>
+
+        <section>
+            <h3>Endpoint</h3>
+            <p><code>POST https://web-screenshot-api-x402-689670267582.us-central1.run.app/capture</code></p>
+        </section>
+
+        <section>
+            <h3>Price</h3>
+            <p class="price">$0.03 USDC (Base L2)</p>
+        </section>
+
+        <section>
+            <h3>Request Example</h3>
+            <pre><code>{
+  "url": "https://example.com",
+  "width": 1280,
+  "height": 800,
+  "fullPage": false
+}</code></pre>
+        </section>
+
+        <section>
+            <h3>Parameters</h3>
+            <ul>
+                <li><code>url</code> - Target webpage URL (required)</li>
+                <li><code>width</code> - Viewport width in pixels (default: 1280)</li>
+                <li><code>height</code> - Viewport height in pixels (default: 800)</li>
+                <li><code>fullPage</code> - Capture full scrollable page (default: false)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Response</h3>
+            <p>Returns the screenshot as binary PNG data (image/png).</p>
+        </section>
+
+        <footer>
+            <p><strong>Payment:</strong> x402 protocol, USDC on Base L2</p>
+            <p><strong>Wallet:</strong> <code>0xc9c96128215baEA725880B004D49809C9122eb49</code></p>
+            <p><strong>Auth:</strong> No accounts or API keys required.</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/ouchanip">https://github.com/ouchanip</a></p>
+        </footer>
+    </div>
+</body>
+</html>
