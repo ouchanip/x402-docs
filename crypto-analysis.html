@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Analysis API - x402 Docs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html">← Top</a>
+        </div>
+        <header>
+            <h1>Crypto Analysis API</h1>
+            <p>暗号通貨の価格履歴とテクニカル分析</p>
+        </header>
+
+        <section>
+            <h3>基本情報</h3>
+            <ul>
+                <li><strong>URL:</strong> <code>https://crypto-analysis-api-x402-689670267582.us-central1.run.app</code></li>
+                <li><strong>ネットワーク:</strong> Base Sepolia (eip155:84532)</li>
+                <li><strong>Facilitator:</strong> <code>https://x402.org/facilitator</code></li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>エンドポイント</h3>
+            
+            <h4>POST /price-history</h4>
+            <p>指定した暗号通貨の価格履歴を取得します。</p>
+            <p class="price">$0.05 USDC</p>
+            
+            <h5>リクエスト例</h5>
+            <pre><code>{
+  "symbol": "BTC",
+  "days": 30,
+  "interval": "1d"
+}</code></pre>
+            
+            <h5>レスポンス例</h5>
+            <pre><code>{
+  "symbol": "BTC",
+  "prices": [
+    { "timestamp": "2026-01-01T00:00:00Z", "open": 42000, "high": 42500, "low": 41800, "close": 42300 },
+    { "timestamp": "2026-01-02T00:00:00Z", "open": 42300, "high": 43100, "low": 42100, "close": 42900 }
+  ]
+}</code></pre>
+        </section>
+
+        <section>
+            <h4>POST /technical-analysis</h4>
+            <p>テクニカル指標（RSI, MACD, 移動平均線など）を算出します。</p>
+            <p class="price">$0.10 USDC</p>
+            
+            <h5>リクエスト例</h5>
+            <pre><code>{
+  "symbol": "ETH",
+  "indicators": ["RSI", "MACD", "SMA"],
+  "period": 14
+}</code></pre>
+            
+            <h5>レスポンス例</h5>
+            <pre><code>{
+  "symbol": "ETH",
+  "analysis": {
+    "RSI": { "value": 65.4, "signal": "neutral" },
+    "MACD": { "macd": 120.5, "signal": 115.2, "histogram": 5.3 },
+    "SMA": { "sma20": 2850, "sma50": 2720, "sma200": 2450 }
+  },
+  "summary": "Bullish momentum with RSI in neutral zone"
+}</code></pre>
+        </section>
+
+        <footer>
+            <p><strong>支払い方法:</strong> x402プロトコル (USDC on Base L2)</p>
+            <p><strong>ウォレット:</strong> <code>0xc9c96128215baEA725880B004D49809C9122eb49</code></p>
+            <p><strong>認証不要:</strong> アカウント作成・APIキー不要</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/ouchanip">https://github.com/ouchanip</a></p>
+        </footer>
+    </div>
+</body>
+</html>

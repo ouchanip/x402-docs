@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation API - x402 Docs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html">← Top</a>
+        </div>
+        <header>
+            <h1>Translation API</h1>
+            <p>テキストの翻訳と言語検出</p>
+        </header>
+
+        <section>
+            <h3>基本情報</h3>
+            <ul>
+                <li><strong>URL:</strong> <code>https://translate-api-x402-689670267582.us-central1.run.app</code></li>
+                <li><strong>ネットワーク:</strong> Base Sepolia (eip155:84532)</li>
+                <li><strong>Facilitator:</strong> <code>https://x402.org/facilitator</code></li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>エンドポイント</h3>
+            
+            <h4>POST /translate</h4>
+            <p>テキストを指定した言語に翻訳します。</p>
+            <p class="price">$0.01 USDC</p>
+            
+            <h5>リクエスト例</h5>
+            <pre><code>{
+  "text": "Hello, world!",
+  "source": "en",
+  "target": "ja"
+}</code></pre>
+            
+            <h5>レスポンス例</h5>
+            <pre><code>{
+  "translated": "こんにちは、世界！",
+  "source": "en",
+  "target": "ja"
+}</code></pre>
+        </section>
+
+        <section>
+            <h4>POST /detect</h4>
+            <p>テキストの言語を検出します。</p>
+            <p class="price">$0.005 USDC</p>
+            
+            <h5>リクエスト例</h5>
+            <pre><code>{
+  "text": "Bonjour le monde"
+}</code></pre>
+            
+            <h5>レスポンス例</h5>
+            <pre><code>{
+  "language": "fr",
+  "confidence": 0.98
+}</code></pre>
+        </section>
+
+        <footer>
+            <p><strong>支払い方法:</strong> x402プロトコル (USDC on Base L2)</p>
+            <p><strong>ウォレット:</strong> <code>0xc9c96128215baEA725880B004D49809C9122eb49</code></p>
+            <p><strong>認証不要:</strong> アカウント作成・APIキー不要</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/ouchanip">https://github.com/ouchanip</a></p>
+        </footer>
+    </div>
+</body>
+</html>
